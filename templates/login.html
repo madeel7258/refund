@@ -83,6 +83,11 @@
          button:hover {
              background-color: #0056b3;
          }
+         .error-msg {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        } 
      </style>
  </head>
  
@@ -92,6 +97,11 @@
      </div>
      <div class="login-container">
          <h1>Login</h1>
+         {% if error_message %}
+        <div class="error-msg" id="errorMsg">
+            {{ error_message }}
+        </div>
+        {% endif %}
          <form action="" method="post">
              <div class="input-group">
                  <label for="emailPharmacy">Enter Email</label>
